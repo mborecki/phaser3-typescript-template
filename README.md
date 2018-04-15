@@ -1,13 +1,17 @@
-# Phaser skeleton w/ TypeScript and WebPack
+# Phaser3 template w/ TypeScript and WebPack - WIP
 
-##About
+A simple example using Phaser with TypeScript and WebPack.
 
-A simple example using Phaser with TypeScript and WebPack. Based on [heathkit/phaser-typescript-webpack-starter](https://github.com/mgiambalvo/phaser-typescript-webpack-starter)
+# Specs
 
-## Added
+* Phaser 3.1.2
 
-* Phaser 2.9.1
-* Testing: jest + ts-jest
+# Problems/Issues
+
+* `/src/scenes/*.ts` - I have to set `this.game` and `this.sys.settings.key` manualy because....
+* `/src/scenes/boot.ts#preload` - I have to set xhrConfig manualy because type definitions force me to do this.
+
+# How to use?
 
 ## Setup
 
@@ -25,10 +29,4 @@ npm run server
 
 ```sh
 npm run build
-```
-
-## Test
-
-```sh
-npm run test
 ```
