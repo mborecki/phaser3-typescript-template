@@ -18,7 +18,7 @@ export default class MainScene extends Phaser.Scene {
         var logo = this.physics.add.image(400, 100, 'logo');
         logo.setVelocity(100, 200);
         logo.setBounce(1, 1);
-        logo.setCollideWorldBounds(1);
+        logo.setCollideWorldBounds(true);
         emitter.startFollow(logo as any);
     }
 }

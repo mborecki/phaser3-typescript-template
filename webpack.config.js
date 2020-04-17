@@ -7,7 +7,7 @@ var webpack = require('webpack')
 const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -35,7 +35,7 @@ module.exports = {
             filename: `index.html`,
             template: path.join(__dirname, 'src/', `index.html`)
         }),
-        new CleanWebpackPlugin(path.join(__dirname, 'dist/')),
+        new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
             {
                 from: './assets',
@@ -56,12 +56,18 @@ module.exports = {
                 loader: 'awesome-typescript-loader'
             },
             {
-              test: [ /\.vert$/, /\.frag$/ ],
-              use: 'raw-loader'
+                test: [/\.vert$/, /\.frag$/],
+                use: 'raw-loader'
             }
         ]
     },
     node: {
         fs: "empty"
+    },
+
+    devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+        compress: true,
+        port: 9000
     }
 };
