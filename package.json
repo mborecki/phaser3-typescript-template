@@ -14,26 +14,31 @@
     "node": ">= 0.10.26",
     "npm": ">=1.4.3"
   },
+  "main": "build/index.html",
+  "build": {
+    "nwVersion": "0.48.3"
+  },
   "scripts": {
-    "server": "webpack-dev-server",
-    "build": "webpack"
+    "server": "webpack serve",
+    "build": "webpack",
+    "prestart:nw": "yarn build",
+    "start:nw": "run --x86 --mirror https://dl.nwjs.io/ ."
   },
   "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "browser-sync-webpack-plugin": "^2.0.1",
-    "copy-webpack-plugin": "^5.1.1",
+    "browser-sync": "^2.26.14",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "copy-webpack-plugin": "^8.1.1",
     "json-loader": "^0.5.7",
-    "typescript": "^3.8.3",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "nwjs-builder-phoenix": "^1.15.0",
+    "typescript": "^4.2.4",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
     "awesome-typescript-loader": "^5.2.1",
-    "clean-webpack-plugin": "^3.0.0",
-    "expose-loader": "^0.7.4",
-    "html-webpack-plugin": "^4.2.0",
-    "phaser": "^3.22.0",
-    "raw-loader": "^4.0.1"
+    "html-webpack-plugin": "^5.3.1",
+    "phaser": "^3.54.0",
+    "raw-loader": "^4.0.2"
   }
 }

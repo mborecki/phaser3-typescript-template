@@ -7,7 +7,6 @@ var webpack = require('webpack')
 const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -19,8 +18,9 @@ module.exports = {
     },
     // devtool: 'cheap-source-map',
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        path: path.resolve(__dirname, 'build'),
+        filename: 'bundle.js',
+        clean: true
     },
 
     resolve: {
@@ -35,13 +35,14 @@ module.exports = {
             filename: `index.html`,
             template: path.join(__dirname, 'src/', `index.html`)
         }),
-        new CleanWebpackPlugin(),
-        new CopyWebpackPlugin([
-            {
-                from: './assets',
-                to: 'assets'
-            }
-        ]),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: './assets',
+                    to: 'assets'
+                }
+            ]
+        }),
         new webpack.DefinePlugin({
             'CANVAS_RENDERER': JSON.stringify(true),
             'WEBGL_RENDERER': JSON.stringify(true)
@@ -60,9 +61,6 @@ module.exports = {
                 use: 'raw-loader'
             }
         ]
-    },
-    node: {
-        fs: "empty"
     },
 
     devServer: {

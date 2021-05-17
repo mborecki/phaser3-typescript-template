@@ -16,17 +16,17 @@ A simple example using Phaser with TypeScript and WebPack.
 ## Setup
 
 ```sh
-npm install
+yarn
 ```
 
 ## Developing
 
 ```sh
-npm run server
+yarn server
 ```
 
 ## Build
 
 ```sh
-npm run build
+yarn build
 ```
