@@ -9,7 +9,6 @@ A simple example using Phaser with TypeScript and WebPack.
 # Problems/Issues
 
 * `/src/scenes/*.ts` - I have to set `this.game` and `this.sys.settings.key` manualy because....
-* `/src/scenes/boot.ts#preload` - I have to set xhrConfig manualy because type definitions force me to do this.
 
 # How to use?
 
