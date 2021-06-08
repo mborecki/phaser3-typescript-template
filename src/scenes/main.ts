@@ -8,14 +8,13 @@ export default class MainScene extends Phaser.Scene {
     }
 
     create() {
-        this.add.image(400, 300, 'sky');
-        var particles = this.add.particles('red');
+        var particles = this.add.particles('_ph', 'dot');
         var emitter = particles.createEmitter({
             speed: 100,
             scale: { start: 1, end: 0 },
             blendMode: 'ADD'
         });
-        var logo = this.physics.add.image(400, 100, 'logo');
+        var logo = this.physics.add.image(400, 100, '_ph', 'test');
         logo.setVelocity(100, 200);
         logo.setBounce(1, 1);
         logo.setCollideWorldBounds(true);
