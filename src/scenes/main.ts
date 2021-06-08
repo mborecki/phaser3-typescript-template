@@ -1,10 +1,11 @@
-export default class MainScene extends Phaser.Scene {
-    constructor(game: Phaser.Game) {
-        super(null);
+import getAudioPlayer from "./audio";
 
-        // Why I have do this?
-        this.game = game;
-        this.sys.settings.key = 'mainScene';
+export default class MainScene extends Phaser.Scene {
+
+    private audio = getAudioPlayer();
+
+    constructor() {
+        super(null);
     }
 
     create() {
@@ -19,5 +20,11 @@ export default class MainScene extends Phaser.Scene {
         logo.setBounce(1, 1);
         logo.setCollideWorldBounds(true);
         emitter.startFollow(logo as any);
+
+        logo.setInteractive();
+        logo.on('pointerdown', async () => {
+            const audio = await this.audio;
+            audio.play('blip');
+        })
     }
 }

@@ -1,12 +1,8 @@
 import * as Phaser from 'phaser';
 
 export default class BootState extends Phaser.Scene {
-    constructor(game: Phaser.Game) {
+    constructor(private firstScene: string) {
         super(null);
-
-        // Why I have do this?
-        this.game = game;
-        this.sys.settings.key = 'bootScene';
     }
 
     preload() {
@@ -14,6 +10,6 @@ export default class BootState extends Phaser.Scene {
     }
 
     create() {
-        this.game.scene.start('mainScene');
+        this.game.scene.start(this.firstScene);
     }
 }
