@@ -29,24 +29,24 @@
     "audio": "node ./audio/audio.js"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.14",
+    "browser-sync": "^2.27.5",
     "browser-sync-webpack-plugin": "^2.3.0",
-    "copy-webpack-plugin": "^9.0.0",
+    "copy-webpack-plugin": "^9.0.1",
     "json-loader": "^0.5.7",
     "nwjs-builder-phoenix": "^1.15.0",
-    "typescript": "^4.3.2",
-    "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
+    "typescript": "^4.4.3",
+    "webpack": "^5.55.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.3.0"
   },
   "dependencies": {
-    "@types/howler": "^2.2.2",
+    "@types/howler": "^2.2.4",
     "audiosprite": "^0.7.2",
     "awesome-typescript-loader": "^5.2.1",
-    "axios": "^0.21.1",
+    "axios": "^0.21.4",
     "free-tex-packer-core": "^0.3.4",
-    "howler": "^2.2.1",
-    "html-webpack-plugin": "^5.3.1",
+    "howler": "^2.2.3",
+    "html-webpack-plugin": "^5.3.2",
     "phaser": "^3.55.2",
     "raw-loader": "^4.0.2"
   }
