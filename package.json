@@ -1,7 +1,7 @@
 {
   "name": "phaser-typescript-starter",
   "description": "A simple example using Phaser with TypeScript and WebPack.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "homepage": "https://github.com/mborecki/phaser-typescript-starter",
   "author": {
     "name": "mborecki"
