@@ -5,17 +5,17 @@ export default class MainScene extends Phaser.Scene {
     private audio = getAudioPlayer();
 
     constructor() {
-        super(null);
+        super({});
     }
 
     create() {
-        var particles = this.add.particles('_ph', 'dot');
+        var particles = this.add.particles('sprites', 'dot');
         var emitter = particles.createEmitter({
             speed: 100,
             scale: { start: 1, end: 0 },
             blendMode: 'ADD'
         });
-        var logo = this.physics.add.image(400, 100, '_ph', 'test');
+        var logo = this.physics.add.image(400, 100, 'sprites', 'test');
         logo.setVelocity(100, 200);
         logo.setBounce(1, 1);
         logo.setCollideWorldBounds(true);

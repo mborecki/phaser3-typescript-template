@@ -1,6 +1,9 @@
 {
     "compilerOptions": {
         "target": "ES6",
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true
     }
 }
