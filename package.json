@@ -24,7 +24,6 @@
     "prebuild": "yarn sprites & yarn audio",
     "build": "webpack",
     "prestart:nw": "yarn build",
-    "start:nw": "run --x86 --mirror https://dl.nwjs.io/ .",
     "sprites": "node ./sprites/spritesheet.js",
     "audio": "node ./audio/audio.js"
   },
@@ -33,7 +32,6 @@
     "browser-sync-webpack-plugin": "^2.3.0",
     "copy-webpack-plugin": "^10.2.4",
     "json-loader": "^0.5.7",
-    "nwjs-builder-phoenix": "^1.15.0",
     "typescript": "^4.6.3",
     "webpack": "^5.71.0",
     "webpack-cli": "^4.9.2",
