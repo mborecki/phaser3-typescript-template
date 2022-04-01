@@ -73,8 +73,6 @@ Promise.all(packingPromises)
 
         fileNames.forEach((filepath, filename) => {
 
-            console.log('TUTAJ!!!!!!', )
-
             const PNGFile = Path.join(baseOutputPath, filepath + '.png');
             const JSONFile = Path.join(baseOutputPath, filepath + '.json');
 
