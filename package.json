@@ -23,7 +23,6 @@
     "start": "webpack serve",
     "prebuild": "yarn sprites & yarn audio",
     "build": "webpack",
-    "prestart:nw": "yarn build",
     "sprites": "node ./sprites/spritesheet.js",
     "audio": "node ./audio/audio.js"
   },
